@@ -13,4 +13,4 @@ jobs:
       - name: Test repolinter
         uses: philips-labs/github-action-repolinter@master
         env:
-          CUSTOM_REPOLINT_FILE: repolint.json
+          CUSTOM_REPOLINT_FILE: repolinter.json
