@@ -35,6 +35,6 @@ jobs:
         with:
           context: .
           push: true
-          tags: ${{ steps.meta.outputs.tags }}
+          tags: simatic-ax/docker:${{ env.BRANCH }}
           labels: ${{ steps.meta.outputs.labels }}
           build-args: "APAX_TOKEN=${{ secrets.AX_TOKEN }}"
