@@ -10,7 +10,11 @@ jobs:
         uses: actions/checkout@v2.0.0
         with:
           fetch-depth: 0
-      - name: Test repolinter
-        uses: philips-labs/github-action-repolinter@master
-        env:
-          CUSTOM_REPOLINT_FILE: repolinter.json
+      - name: Setup repolinter
+        run: npm i -g repolinter
+      - name: List files
+        run: |
+          pwd
+          ls -a
+      - name: Lint repository
+        run: repolinter lint
